@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Centro de Análisis Biocuántico</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧬</text></svg>">
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+--cyan:#06B6D4;
+--green:#10B981;
+--bg:#0A0A0F;
+--card:#1C1C28;
+--text:#F0F0F5;
+--muted:#9CA3AF;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'DM Sans',sans-serif;
+background:var(--bg);
+color:var(--text);
+display:flex;
+flex-direction:column;
+align-items:center;
+}
+
+/* FONDO TECNOLÓGICO */
+
+body::before{
+content:'';
+position:fixed;
+top:-300px;
+left:-300px;
+width:800px;
+height:800px;
+background:radial-gradient(circle, rgba(6,182,212,0.12), transparent 70%);
+z-index:-1;
+}
+
+body::after{
+content:'';
+position:fixed;
+bottom:-300px;
+right:-300px;
+width:800px;
+height:800px;
+background:radial-gradient(circle, rgba(16,185,129,0.12), transparent 70%);
+z-index:-1;
+}
+
+/* BARRA SUPERIOR */
+
+.topbar{
+width:100%;
+max-width:1200px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:25px 20px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo-icon{
+width:42px;
+height:42px;
+border-radius:10px;
+background:linear-gradient(135deg,var(--cyan),var(--green));
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:20px;
+}
+
+.logo-name{
+font-family:'Bebas Neue';
+font-size:26px;
+letter-spacing:1px;
+}
+
+/* INDICADOR CONSULTAS */
+
+.status{
+display:flex;
+align-items:center;
+gap:8px;
+font-size:14px;
+color:var(--muted);
+}
+
+.status-dot{
+width:10px;
+height:10px;
+border-radius:50%;
+background:var(--green);
+box-shadow:0 0 10px var(--green);
+animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+0%{opacity:1}
+50%{opacity:.3}
+100%{opacity:1}
+}
+
+/* CONTENEDOR */
+
+.wrapper{
+max-width:1100px;
+width:100%;
+text-align:center;
+padding:40px 20px;
+}
+
+/* TITULO */
+
+.hero h1{
+font-family:'Bebas Neue';
+font-size:110px;
+line-height:.9;
+}
+
+.hero span{
+color:var(--cyan);
+}
+
+.hero p{
+margin-top:20px;
+font-size:18px;
+color:var(--muted);
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+line-height:1.7;
+}
+
+/* BOTON */
+
+.btn{
+display:inline-block;
+margin-top:30px;
+background:linear-gradient(135deg,var(--cyan),var(--green));
+padding:14px 28px;
+border-radius:10px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+box-shadow:0 10px 25px rgba(0,0,0,0.4);
+}
+
+/* TARJETAS */
+
+.cards{
+margin-top:70px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+}
+
+.card{
+background:var(--card);
+padding:30px;
+border-radius:18px;
+border:1px solid rgba(255,255,255,0.05);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 20px 40px rgba(0,0,0,0.6);
+}
+
+.card-icon{
+font-size:38px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-family:'Bebas Neue';
+font-size:26px;
+margin-bottom:10px;
+}
+
+.card p{
+font-size:14px;
+color:var(--muted);
+line-height:1.6;
+}
+
+/* INFO */
+
+.info{
+margin-top:80px;
+max-width:800px;
+margin-left:auto;
+margin-right:auto;
+color:var(--muted);
+line-height:1.8;
+}
+
+/* FOOTER */
+
+footer{
+margin-top:80px;
+border-top:1px solid rgba(255,255,255,.08);
+padding:20px;
+font-size:12px;
+color:var(--muted);
+text-align:center;
+width:100%;
+max-width:900px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="topbar">
+
+<div class="logo">
+<div class="logo-icon">🧬</div>
+<div class="logo-name">Centro Biocuántico</div>
+</div>
+
+<div class="status">
+<div class="status-dot"></div>
+<strong>+400 consultas realizadas</strong>
+</div>
+
+</div>
+
+<div class="wrapper">
+
+<section class="hero">
+
+<h1>ANÁLISIS<br><span>BIOCUÁNTICO</span></h1>
+
+<p>
+Evaluación del estado energético del cuerpo mediante tecnología de resonancia biocuántica.
+El diagnóstico se realiza colocando la palma de la mano sobre un sensor que analiza
+diferentes indicadores del organismo y genera un reporte del estado general del cuerpo.
+</p>
+
+<a class="btn" href="https://wa.me/5210000000000">Agendar consulta</a>
+
+</section>
+
+<div class="cards">
+
+<div class="card">
+<div class="card-icon">✋</div>
+<h3>Análisis con la palma</h3>
+<p>El diagnóstico se realiza colocando la palma de la mano sobre un sensor que detecta las frecuencias energéticas del cuerpo.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🧬</div>
+<h3>Análisis del organismo</h3>
+<p>El sistema evalúa diferentes indicadores relacionados con órganos, sistemas del cuerpo, vitaminas y minerales.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">⚡</div>
+<h3>Resultados rápidos</h3>
+<p>El análisis es rápido, no invasivo y permite conocer el estado del cuerpo en pocos minutos.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🧠</div>
+<h3>Sistema nervioso</h3>
+<p>Permite evaluar el estado energético del sistema nervioso y detectar niveles de estrés o fatiga.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">❤️</div>
+<h3>Sistema cardiovascular</h3>
+<p>Se analizan indicadores relacionados con la circulación sanguínea y el funcionamiento del corazón.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🥗</div>
+<h3>Vitaminas y minerales</h3>
+<p>El sistema puede detectar posibles deficiencias nutricionales importantes para el organismo.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🧪</div>
+<h3>Metabolismo</h3>
+<p>Se evalúa el funcionamiento metabólico y el equilibrio energético del cuerpo.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🛡</div>
+<h3>Sistema inmunológico</h3>
+<p>Permite conocer indicadores relacionados con el estado del sistema de defensas del cuerpo.</p>
+</div>
+
+<div class="card">
+<div class="card-icon">🫁</div>
+<h3>Sistema respiratorio</h3>
+<p>Evalúa indicadores energéticos relacionados con los pulmones y la capacidad respiratoria.</p>
+</div>
+
+</div>
+
+<div class="info">
+<p>
+El análisis biocuántico permite conocer el estado general del organismo y detectar posibles
+desequilibrios antes de que se conviertan en problemas de salud.
+</p>
+</div>
+
+<footer>
+Centro de Diagnóstico Biocuántico · Evaluación energética del cuerpo
+</footer>
+
+</div>
+
+</body>
+</html>
